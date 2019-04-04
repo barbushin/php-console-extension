@@ -1,0 +1,127 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" media="screen" href="../style.css"/>
+	<script src="options.js"></script>
+	<script src="../js/ga.js"></script>
+	<style type="text/css">
+		h4 {
+			margin: 0.5em;
+		}
+
+		.list {
+			overflow: auto;
+			width: 180px;
+			height: 120px;
+			font-size: 0.7em;
+		}
+
+		img {
+			vertical-align: middle;
+		}
+
+		a {
+			margin-right: 8px;
+			vertical-align: middle;
+		}
+	</style>
+</head>
+
+<body>
+
+<hr/>
+
+<div class="pure-g">
+
+	<div class="pure-u-1-4">
+		<h4>Console</h4>
+
+		<label for="consoleDebug" class="pure-checkbox">
+			<input id="consoleDebug" type="checkbox"> Log debug
+		</label>
+
+		<label for="consoleErrors" class="pure-checkbox">
+			<input id="consoleErrors" type="checkbox"> Log errors
+		</label>
+
+		<label for="consoleCollapseNoErrors" class="pure-checkbox">
+			<input id="consoleCollapseNoErrors" type="checkbox"> Collapse if no errors
+		</label>
+
+		<label for="evalClearConsole" class="pure-checkbox">
+			<input id="evalClearConsole" type="checkbox"> Clear on eval
+		</label>
+
+		<label for="evalShowTime" class="pure-checkbox">
+			<input id="evalShowTime" type="checkbox"> Display eval time
+		</label>
+
+
+	</div>
+
+
+	<div class="pure-u-1-4">
+		<h4>Notifications</h4>
+
+		<label for="notifyDebug" class="pure-checkbox">
+			<input id="notifyDebug" type="checkbox"> Notify debug
+		</label>
+
+		<label for="notifyErrors" class="pure-checkbox">
+			<input id="notifyErrors" type="checkbox"> Notify errors
+		</label>
+
+		<label for="notifyJavaScriptErrors" class="pure-checkbox">
+			<input id="notifyJavaScriptErrors" type="checkbox"> Notify JavaScript errors
+		</label>
+
+		<label for="notifyJumpToFile" class="pure-checkbox">
+			<input id="notifyJumpToFile" type="checkbox"> Jump to file
+		</label>
+
+		<label for="notifyCopyToClipboard" class="pure-checkbox">
+			<input id="notifyCopyToClipboard" type="checkbox"> Copy button
+		</label>
+
+
+		<label for="notifyLifeTime" class="pure-checkbox">
+			Close in <select id="notifyLifeTime">
+				<option value="">Never</option>
+				<option value="1">1 second</option>
+				<option value="2">2 seconds</option>
+				<option value="3">3 seconds</option>
+				<option value="5">5 seconds</option>
+				<option value="10">10 seconds</option>
+				<option value="30">30 seconds</option>
+				<option value="60">60 seconds</option>
+			</select>
+		</label>
+
+	</div>
+
+	<div class="pure-u-1-4">
+		<h4>Ignore errors</h4>
+
+		<div id="errorContainer" class="list"></div>
+	</div>
+
+
+	<div class="pure-u-1-4">
+		<h4>Ignore debug</h4>
+
+		<div id="debugContainer" class="list"></div>
+	</div>
+
+</div>
+
+<hr/>
+
+&nbsp;&nbsp;<a href="https://github.com/barbushin/php-console/wiki/Jump-to-file" target="_blank"><img src="../img/jump.png"/> Jump to file</a>
+<a href="https://github.com/barbushin/php-console#protect-connection" target="_blank"><img src="../img/key_16.png"/> Protect by password</a>
+<a href="https://github.com/barbushin/php-console#remote-php-code-execution" target="_blank"><img src="../img/terminal_16.png"/> Enable eval terminal</a>
+<a href="https://github.com/barbushin/php-console/wiki/How-to-report-bug-or-feature" target="_blank"><img src="../img/feedback_16.png"/> Report bug/feature</a>
+<a href="https://chrome.google.com/webstore/detail/php-console/nfhmhhlpfleoednkpnnnkolmclajemef/reviews" target="_blank"><img src="../img/rate.png"/> Give a star</a>
+<a href="https://github.com/barbushin/php-console" target="_blank"><img src="../img/homepage.png"/> Home</a>
+
+
+</body>
+</html>

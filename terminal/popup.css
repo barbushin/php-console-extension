@@ -1,0 +1,30 @@
+body {
+	width: 750px
+}
+
+em {
+	border-spacing: 2px;
+	border-color: gray;
+	background: #eeeeee;
+	padding: 1px 1px 1px 1px;
+}
+
+textarea {
+	font-family: Monaco, "Liberation Mono", Courier, monospace;
+	font-size: 12px;
+	background: #333333;
+	color: white;
+	width: 100%;
+	padding: 10px 10px 10px 10px;
+}
+
+.send {
+	background: #444444;
+}
+
+#logoutButton {
+	position: relative;
+	float: right;
+	margin-top: 20px;
+	margin-right: 5px;
+}
