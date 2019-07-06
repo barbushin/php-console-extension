@@ -61,18 +61,25 @@ function MessagesHandler(options, auth, notificationsHandler, app) {
 		}
 	};
 
-	function onTabReady(tabId, callback) {
-		var isReady = false;
-		var interval = setInterval(function() {
-			chrome.tabs.get(tabId, function(tab) {
-				if(!tab.status || (tab.status == 'complete' && !isReady && app._tabsIds[tabId])) {
-					isReady = true;
-					clearInterval(interval);
-					callback();
-				}
-			});
-		}, 100);
-	}
+    function onTabReady(tabId, callback) {
+        var isReady = false;
+
+        var interval = setInterval(function() {
+            chrome.tabs.get(tabId, function(tab) {
+                if(!tab || !tab.status || (tab.status == 'complete' && !isReady && app._tabsIds[tabId])) {
+                    isReady = true;
+                    clearInterval(interval);
+                    callback();
+                }
+            });
+        }, 100);
+
+        setTimeout(function() {
+            if(!isReady) {
+                clearInterval(interval);
+            }
+        }, 10000);
+    }
 
 	function filterIgnoredMessages(messages, server) {
 		var ignoreErrors = server['ignoreErrors'];
